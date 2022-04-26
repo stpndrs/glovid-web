@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans+Caption&family=Podkova:wght@500&family=Poppins:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+}
+
+h1 {
+    font-size: 2.5rem !important;
+}
+
+h2 {
+    font-size: 2rem !important;
+}
+
+h3 {
+    font-size: 1.75rem !important;
+}
+
+h4 {
+    font-size: 1.5rem !important;
+}
+
+h5 {
+    font-size: 1.25rem !important;
+}
+
+h6 {
+    font-size: 1rem !important;
+}
+
+a {
+    color: #FFC727;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bf8f00 !important;
+}
+
+.btn {
+    background-color: #101222;
+    color: white;
+    /* width: 232px;
+    height: 50px;
+    padding: 15px 35px; */
+    border-radius: 5px;
+    /* text-align: center;
+    align-items: center;
+    justify-content: center; */
+}
+
+.btn:hover {
+    background-color: #0A0E1B;
+}
+
+#container {
+    margin-top: 15vh;
+}
+
+section {
+    margin-top: 5vh;
+}
+
+.card {
+    padding: 10px;
+    margin-top: 2rem;
+    background-color: #0F1528;
+    border-radius: 10px;
+    color: white;
+}
+
+.img {
+    /* margin: -20px -20px 20px -20px; */
+    padding: 20vh;
+    border-radius: 10px 10px 0 0;
+    background-color: gray;
+}
+
+.date {
+    font-family: 'Podkova', serif;
+    color: red;
+}
+
+/* NAVBAR START */
+nav {
+    background-color: white;
+}
+
+.glov-white,
+.glov-dark {
+    width: 150px;
+}
+
+@media (max-width: 700px) {
+    .navbarMobile {
+        display: flex !important;
+    }
+
+    nav.navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbarMobile .perNavbarMobile .icon {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbarMobile .perNavbarMobile h3 {
+        font-size: .7rem !important;
+    }
+
+    .navbarMobile .perNavbarMobile .icon {
+        font-size: 1.1rem !important;
+    }
+}
+
+.navbarMobile {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    background-color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 1rem 1rem 1rem 10px rgba(0, 0, 0, 0.226);
+    z-index: 99999999999999;
+}
+
+.navbarMobile .perNavbarMobile {
+    width: calc(100%/3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.navbarMobile .perNavbarMobile .icon {
+    font-size: 1.5rem;
+    color: #000;
+    padding-top: 10px;
+}
+
+.navbarMobile .perNavbarMobile h3 {
+    font-size: .8rem !important;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.navbarMobile .perNavbarMobile:hover {
+    opacity: .8;
+}
+
+/* Translate Box */
+.translate-box {
+    align-items: center;
+    display: flex;
+    border-radius: 40px;
+    position: fixed;
+    right: 0;
+    bottom: 100px;
+    min-width: 200px;
+    min-height: 40px;
+    background: #0F1528;
+    transform: translateX(77%);
+    z-index: 50;
+    transition: transform .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: -5px -5px 5px rgb(212 212 212 / 10%), 5px 5px 5px rgb(0 0 0 / 40%);
+    -webkit-box-shadow: -5px -5px 5px rgb(212 212 212 / 10%), 5px 5px 5px rgb(0 0 0 / 40%);
+    -moz-box-shadow: -5px -5px 5px rgba(212, 212, 212, .1), 5px 5px 5px rgba(0, 0, 0, .4);
+}
+
+.translate-box .translator {
+    background: #0F1528;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    min-width: 33px;
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: -5px -5px 5px rgb(212 212 212 / 0%), 5px 5px 5px rgb(0 0 0 / 40%);
+    -webkit-box-shadow: -5px -5px 5px rgb(212 212 212 / 0%), 5px 5px 5px rgb(0 0 0 / 40%);
+    -moz-box-shadow: -5px -5px 5px rgba(212, 212, 212, .1), 5px 5px 5px rgba(0, 0, 0, .4);
+}
+
+.translate-box.active {
+    transform: translateX(0);
+}
+
+.translate-box .language {
+    background: #01031f34;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: box-shadow .3s ease-in-out;
+}
+
+/* NAVBAR END */
+
+/* DOWNLOAD GLOVIDAPP START */
+.glovid-app {
+    position: relative;
+    margin-top: 30vh;
+    color: white;
+}
+
+.glovid-app img {
+    position: absolute;
+    top: -100px;
+}
+
+.glovid-app .row {
+    background-color: #0F1528;
+    padding: 100px;
+    border-radius: 10px;
+}
+
+.glovid-app h3 {
+    font-family: 'Podkova', serif;
+    font-weight: bold;
+}
+
+
+@media (max-width: 767.98px) {
+    .glovid-app .row {
+        padding: 10px;
+    }
+
+    .glovid-app img {
+        position: relative;
+        /* top: -100px; */
+    }
+}
+
+/* DOWNLOAD GLOVIDAPP END */
+
+footer .content {
+    background-color: #101222;
+    color: white;
+}
+
+footer h5 {
+    font-weight: bold;
+}

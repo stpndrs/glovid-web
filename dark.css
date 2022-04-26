@@ -1,0 +1,41 @@
+.dark {
+    background-color: #090B1F;
+    color: white;
+}
+
+.dark nav {
+    background-color: #0f1528dd !important;
+    color: white !important;
+    fill: white;
+}
+
+.dark .navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    color: #FFC727 !important;
+}
+
+.dark .glov-white {
+    display: block !important;
+    transition: .3s;
+}
+
+.dark .glov-dark {
+    display: none;
+    transition: .3s;
+}
+
+#darkBtn {
+    /* background-color: #0F1528; */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.dark #darkBtn {
+    /* background-color: #ffffff; */
+    color: rgb(255, 255, 255);
+}
