@@ -64,10 +64,66 @@ section {
 
 .card {
     padding: 10px;
-    margin-top: 2rem;
     background-color: #0F1528;
     border-radius: 10px;
     color: white;
+}
+
+.card-2 {
+    padding: 30px;
+    background-color: #0F1528;
+    border-radius: 10px;
+    color: white;
+    height: 100%;
+}
+
+.card-3 {
+    position: relative;
+    padding: 20px;
+    background-color: #101222;
+    border-radius: 10px;
+    color: white;
+    border: .1px solid white;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card-3 img {
+    width: 100%;
+}
+
+.card-3 .covid-data {
+    position: absolute;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 30%;
+}
+
+.card-3 .vaccine-data {
+    /* position: absolute; */
+    vertical-align: middle;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.card-3 h2 {
+    font-weight: bolder;
+}
+
+.card-3 p {
+    color: #FFC727;
+    margin-bottom: 0;
+    font-size: x-large;
 }
 
 .img {
@@ -93,6 +149,13 @@ nav {
 }
 
 @media (max-width: 700px) {
+
+    .card,
+    .card-2,
+    .card-3 {
+        margin-top: 2rem;
+    }
+
     .navbarMobile {
         display: flex !important;
     }
@@ -210,7 +273,7 @@ nav {
 /* DOWNLOAD GLOVIDAPP START */
 .glovid-app {
     position: relative;
-    margin-top: 30vh;
+    /* margin-top: 30vh; */
     color: white;
 }
 
@@ -232,6 +295,10 @@ nav {
 
 
 @media (max-width: 767.98px) {
+    .glovid-app {
+        margin-top: 30vh;
+    }
+
     .glovid-app .row {
         padding: 10px;
     }
@@ -244,11 +311,37 @@ nav {
 
 /* DOWNLOAD GLOVIDAPP END */
 
-footer .content {
+/* CHART JS START */
+.chart-sebaran {
+    margin-top: 20px;
+}
+.chart-title p {
+    color: #FFC727;
+    font-size: small;
+}
+/* CHART JS END */
+
+header {
+    margin-top: 10.5vh;
+    padding: 10vh;
     background-color: #101222;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Podkova', serif;
+}
+
+footer .content {
+    background-color: #0f1528;
     color: white;
 }
 
 footer h5 {
     font-weight: bold;
+}
+
+footer p {
+    margin: 0;
 }
