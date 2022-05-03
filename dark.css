@@ -45,3 +45,11 @@
     background-color: rgba(255, 255, 255, 0.074);
 }
 /* CHART JS END */
+
+.dark .card-4 {
+    border: 1px solid #ffffff;
+}
+
+.dark .card-4 .title, .dark .breadcrumb {
+    background-color: #101222;
+}

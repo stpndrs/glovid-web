@@ -126,6 +126,46 @@ section {
     font-size: x-large;
 }
 
+.card-4 {
+    max-width: fit-content;
+    border: 1px solid #101222;
+    border-radius: 5px;
+    /* padding: 0 !important; */
+    padding: 10px;
+    /* position: fixed; */
+    /* background-color: white; */
+}
+.card-4 .title {
+    font-family: 'Podkova', serif;
+    background-color: #101222;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.card-4 .title h3 {
+    font-family: 'Podkova', serif;
+}
+.card-4 .img {
+    border-radius: 5px;
+    padding: 50px;
+    width: 1px;
+}
+
+.card-4 hr {
+    border-top: 2px solid #101222;
+}
+
+.breadcrumb {
+    background-color: #101222;
+    padding: 15px;
+    border-radius: 5px;
+}
+.breadcrumb a {
+    color: white;
+}
+
 .img {
     /* margin: -20px -20px 20px -20px; */
     padding: 20vh;
@@ -148,7 +188,7 @@ nav {
     width: 150px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 991.98px) {
 
     .card,
     .card-2,
@@ -161,6 +201,10 @@ nav {
     }
 
     nav.navbar {
+        display: none;
+    }
+
+    #berita-lainnya {
         display: none;
     }
 }
