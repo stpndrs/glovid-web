@@ -1,0 +1,26 @@
+{
+    "name": "glovid-web",
+    "version": "1.0.0",
+    "description": "<p>Berita : https://covid19.go.id/feed/berita</p>\r <p>Data Update Harian : https://data.covid19.go.id/public/api/update.json</p>\r <p>Data Setiap Provinsi : https://data.covid19.go.id/public/api/prov.json</p>\r <p>Data Pemeriksaan Vaksinasi : https://data.covid19.go.id/public/api/pemeriksaan-vaksinasi.json</p>\r <p>Data Rumah Sakit Rujukan : https://data.covid19.go.id/public/api/rs.json</p>",
+    "main": "script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "watch": "webpack --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stpndrs/glovid-web.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/stpndrs/glovid-web/issues"
+    },
+    "homepage": "https://github.com/stpndrs/glovid-web#readme",
+    "dependencies": {
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2"
+    }
+}
