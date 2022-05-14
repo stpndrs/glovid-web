@@ -1,220 +1,313 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="./css/swiper.css" />
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="swiper.css">
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/dark.css" />
+    </head>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dark.css">
-</head>
+    <body>
+        <nav class="shadow-sm navbar navbar-expand-lg fixed-top navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="./img/glovid-nav-dark.svg"
+                        class="glov-dark"
+                        alt="Glovid"
+                    />
+                    <img
+                        src="./img/glovid-nav-white.svg"
+                        class="glov-white d-none"
+                        alt="Glovid"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="index.html"
+                                >Beranda</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="berita.html"
+                                >Berita</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sebaran.html">Sebaran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rsrujukan.html"
+                                >RS Rujukan</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/src/img/glovid-nav-dark.svg" class="glov-dark" alt="Glovid">
-                <img src="/src/img/glovid-nav-white.svg" class="glov-white d-none" alt="Glovid">
+        <!-- navbar mobile start -->
+        <div class="navbarMobile">
+            <a href="index.html" class="perNavbarMobile">
+                <div class="icon">
+                    <i data-feather="home"></i>
+                </div>
+                <h3>Beranda</h3>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav  ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="berita.html">Berita</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sebaran.html">Sebaran</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="rsrujukan.html">RS Rujukan</a>
-                    </li>
-                </ul>
+
+            <a href="berita.html" class="perNavbarMobile">
+                <div class="icon active">
+                    <i data-feather="book-open"></i>
+                </div>
+                <h3 class="active">Berita</h3>
+            </a>
+
+            <a href="sebaran.html" class="perNavbarMobile">
+                <div class="icon">
+                    <i data-feather="map-pin"></i>
+                </div>
+                <h3>Sebaran</h3>
+            </a>
+
+            <a href="rsrujukan.html" class="perNavbarMobile">
+                <div class="icon">
+                    <i data-feather="plus-circle"></i>
+                </div>
+                <h3>RS Rujukan</h3>
+            </a>
+        </div>
+        <!-- navbar mobile end -->
+
+        <!-- Darkmode Mobile -->
+        <div class="translate-box">
+            <div class="translator">
+                <span class="" onclick="glovid.setDarkMode()" id="darkBtn">
+                    <i class="bi bi-moon"></i>
+                </span>
             </div>
         </div>
-    </nav>
 
-    <!-- navbar mobile start -->
-    <div class="navbarMobile">
-
-        <a href="index.html" class="perNavbarMobile">
-            <div class="icon">
-                <i data-feather="home"></i>
-            </div>
-            <h3>Beranda</h3>
-        </a>
-
-        <a href="berita.html" class="perNavbarMobile">
-            <div class="icon active">
-                <i data-feather="book-open"></i>
-            </div>
-            <h3 class="active">Berita</h3>
-        </a>
-
-        <a href="sebaran.html" class="perNavbarMobile">
-            <div class="icon">
-                <i data-feather="map-pin"></i>
-            </div>
-            <h3>Sebaran</h3>
-        </a>
-
-        <a href="rsrujukan.html" class="perNavbarMobile">
-            <div class="icon">
-                <i data-feather="plus-circle"></i>
-            </div>
-            <h3>RS Rujukan</h3>
-        </a>
-
-    </div>
-    <!-- navbar mobile end -->
-
-    <!-- Darkmode Mobile -->
-    <div class="translate-box">
-        <div class="translator">
-            <span class="" onclick="setDarkMode()" id="darkBtn">
-                <i class="bi bi-moon"></i>
-            </span>
-        </div>
-    </div>
-
-    <div class="container" id="container">
-        <section>
-            <div class="row">
-                <div class="col-5" id="berita-lainnya">
-                    <div class="row">
-                        <div class="card-4">
-                            <div class="title">
-                                <h3>BERITA LAINNYA</h3>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="img"></div>
+        <div class="container" id="container">
+            <section>
+                <div class="row">
+                    <div class="col-5" id="berita-lainnya">
+                        <div class="row">
+                            <div class="card-4">
+                                <div class="title">
+                                    <h3>BERITA LAINNYA</h3>
                                 </div>
-                                <div class="col-lg">
-                                    <a href="#">
-                                        <h5>Lorem ipsum dolor sit amet....</h5>
-                                    </a>
-                                    <p class="date">9 April 2022</p>
-                                </div>
-                            </div>
-                            <hr>
 
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="img"></div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-lg">
+                                        <a href="#">
+                                            <h5>
+                                                Lorem ipsum dolor sit amet....
+                                            </h5>
+                                        </a>
+                                        <p class="date">9 April 2022</p>
+                                    </div>
                                 </div>
-                                <div class="col-lg">
-                                    <a href="#">
-                                        <h5>Lorem ipsum dolor sit amet....</h5>
-                                    </a>
-                                    <p class="date">9 April 2022</p>
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-lg">
+                                        <a href="#">
+                                            <h5>
+                                                Lorem ipsum dolor sit amet....
+                                            </h5>
+                                        </a>
+                                        <p class="date">9 April 2022</p>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-lg">
+                                        <a href="#">
+                                            <h5>
+                                                Lorem ipsum dolor sit amet....
+                                            </h5>
+                                        </a>
+                                        <p class="date">9 April 2022</p>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-lg">
+                                        <a href="#">
+                                            <h5>
+                                                Lorem ipsum dolor sit amet....
+                                            </h5>
+                                        </a>
+                                        <p class="date">9 April 2022</p>
+                                    </div>
                                 </div>
                             </div>
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="col-lg">
-                                    <a href="#">
-                                        <h5>Lorem ipsum dolor sit amet....</h5>
-                                    </a>
-                                    <p class="date">9 April 2022</p>
-                                </div>
-                            </div>
-                            <hr>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="col-lg">
-                                    <a href="#">
-                                        <h5>Lorem ipsum dolor sit amet....</h5>
-                                    </a>
-                                    <p class="date">9 April 2022</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-                </div>
-                <div class="col-lg">
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Berita</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
-                        </ol>
-                    </nav>
-                    <section>
-                        <div class="card-5">
-                            <h3>Lorem ipsum dolor sit amet.</h3>
-                            <p class="date">09 April 2022</p>
+                    <div class="col-lg">
+                        <nav
+                            style="--bs-breadcrumb-divider: '>'"
+                            aria-label="breadcrumb"
+                        >
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="#">Berita</a>
+                                </li>
+                                <li
+                                    class="breadcrumb-item active"
+                                    aria-current="page"
+                                >
+                                    Library
+                                </li>
+                            </ol>
+                        </nav>
+                        <section>
+                            <div class="card-5">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                <p class="date">09 April 2022</p>
 
-                            <div class="img"></div>
-                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores vel iusto asperiores hic repudiandae magni esse explicabo harum in, provident laborum perspiciatis, quo aliquam pariatur mollitia suscipit laudantium ut, sit tenetur voluptatum? Officia consectetur esse vel natus voluptatem iste dignissimos aliquid dolores iusto illo hic qui, incidunt facilis eligendi temporibus, commodi numquam veniam? Cupiditate voluptatum dolorem ducimus, provident, minus dolor hic inventore magni esse qui illo vero similique totam officiis sapiente ad optio, amet eveniet. Architecto aut quis autem ratione fugit perferendis repellendus praesentium quisquam repudiandae. Fuga, iure possimus. Rerum provident tempore libero. A quo inventore debitis ipsa alias officiis possimus minus? Dolore laborum est nulla ullam optio voluptas placeat obcaecati. Architecto quasi quaerat at! Mollitia pariatur aspernatur eum molestias velit hic fuga similique consequatur consectetur qui minus voluptatibus illo excepturi, quia repudiandae sit modi nihil expedita libero cum. Minus, ea. Aspernatur sit debitis assumenda. Reprehenderit aperiam culpa vel quasi illum ex aut ducimus, quo laborum animi? Expedita, velit vel ducimus, similique quos optio officia minus cupiditate porro earum libero excepturi est nam eaque veritatis autem quidem doloremque culpa molestiae. Impedit repellat vel tempore obcaecati, ad eaque laborum ipsam odit quo deleniti dicta porro, fugit rerum possimus doloremque ratione aut!</p>
-                        </div>
-                    </section>
+                                <div class="img"></div>
+                                <p class="content">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Maiores vel iusto
+                                    asperiores hic repudiandae magni esse
+                                    explicabo harum in, provident laborum
+                                    perspiciatis, quo aliquam pariatur mollitia
+                                    suscipit laudantium ut, sit tenetur
+                                    voluptatum? Officia consectetur esse vel
+                                    natus voluptatem iste dignissimos aliquid
+                                    dolores iusto illo hic qui, incidunt facilis
+                                    eligendi temporibus, commodi numquam veniam?
+                                    Cupiditate voluptatum dolorem ducimus,
+                                    provident, minus dolor hic inventore magni
+                                    esse qui illo vero similique totam officiis
+                                    sapiente ad optio, amet eveniet. Architecto
+                                    aut quis autem ratione fugit perferendis
+                                    repellendus praesentium quisquam
+                                    repudiandae. Fuga, iure possimus. Rerum
+                                    provident tempore libero. A quo inventore
+                                    debitis ipsa alias officiis possimus minus?
+                                    Dolore laborum est nulla ullam optio
+                                    voluptas placeat obcaecati. Architecto quasi
+                                    quaerat at! Mollitia pariatur aspernatur eum
+                                    molestias velit hic fuga similique
+                                    consequatur consectetur qui minus
+                                    voluptatibus illo excepturi, quia
+                                    repudiandae sit modi nihil expedita libero
+                                    cum. Minus, ea. Aspernatur sit debitis
+                                    assumenda. Reprehenderit aperiam culpa vel
+                                    quasi illum ex aut ducimus, quo laborum
+                                    animi? Expedita, velit vel ducimus,
+                                    similique quos optio officia minus
+                                    cupiditate porro earum libero excepturi est
+                                    nam eaque veritatis autem quidem doloremque
+                                    culpa molestiae. Impedit repellat vel
+                                    tempore obcaecati, ad eaque laborum ipsam
+                                    odit quo deleniti dicta porro, fugit rerum
+                                    possimus doloremque ratione aut!
+                                </p>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0f1528" fill-opacity="1"
-                d="M0,64L48,80C96,96,192,128,288,133.3C384,139,480,117,576,133.3C672,149,768,203,864,234.7C960,267,1056,277,1152,266.7C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-        <div class="content">
-            <div class="row container">
-                <div class="col-lg mb-5">
-                    <img src="/src/img/glovid-nav-white.svg" alt="Glovid">
-                </div>
-                <div class="col-lg mb-5">
-                    <h5>Menu</h5>
-                    <p><a href="index.html">Beranda</a></p>
-                    <p><a href="berita.html">Berita</a></p>
-                    <p><a href="sebaran.html">Sebaran</a></p>
-                </div>
-                <div class="col-lg mb-5 text-end">
-                    <h5>About</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora optio est numquam dignissimos
-                        exercitationem enim, iure amet voluptatibus iste, voluptas non reprehenderit voluptate. Officiis
-                        magnam modi voluptatem quos earum esse.</p>
-                </div>
-            </div>
+            </section>
         </div>
-    </footer>
 
+        <footer>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#0f1528"
+                    fill-opacity="1"
+                    d="M0,64L48,80C96,96,192,128,288,133.3C384,139,480,117,576,133.3C672,149,768,203,864,234.7C960,267,1056,277,1152,266.7C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                ></path>
+            </svg>
+            <div class="content">
+                <div class="container row">
+                    <div class="mb-5 col-lg">
+                        <img src="./img/glovid-nav-white.svg" alt="Glovid" />
+                    </div>
+                    <div class="mb-5 col-lg">
+                        <h5>Menu</h5>
+                        <p><a href="index.html">Beranda</a></p>
+                        <p><a href="berita.html">Berita</a></p>
+                        <p><a href="sebaran.html">Sebaran</a></p>
+                    </div>
+                    <div class="mb-5 col-lg text-end">
+                        <h5>About</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Tempora optio est numquam dignissimos
+                            exercitationem enim, iure amet voluptatibus iste,
+                            voluptas non reprehenderit voluptate. Officiis
+                            magnam modi voluptatem quos earum esse.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-    <script src="script.js"></script>
+        <script src="./js/script.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
 
-    <script>
-        feather.replace()
-    </script>
-</body>
-
+        <script>
+            feather.replace()
+        </script>
+    </body>
 </html>

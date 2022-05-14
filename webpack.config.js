@@ -4,7 +4,8 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        filename: 'demo.js',
+        filename: 'script.js',
         path: path.resolve(__dirname, 'dist/js'),
+        library: 'glovid',
     },
 }

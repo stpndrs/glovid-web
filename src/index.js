@@ -1,6 +1,4 @@
-if (localStorage.getItem('theme') == 'dark') setDarkMode()
-
-function setDarkMode() {
+export const setDarkMode = () => {
     let emoticon = ''
     let isDark = document.body.classList.toggle('dark')
 
@@ -13,3 +11,5 @@ function setDarkMode() {
     }
     document.getElementById('darkBtn').innerHTML = emoticon
 }
+
+if (localStorage.getItem('theme') == 'dark') setDarkMode()
