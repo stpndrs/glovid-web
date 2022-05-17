@@ -21,10 +21,16 @@
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="./css/swiper.css" />
+        <link rel="stylesheet" href="./css/default.css" />
 
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/dark.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+            integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+            crossorigin=""
+        />
     </head>
 
     <body>
@@ -138,7 +144,18 @@
                                 <img src="./icon/user-plus.svg" alt="" />
                                 <!-- </div> -->
                                 <div class="covid-data">
-                                    <h2>6,039,873</h2>
+                                    <h2
+                                        id="api-sebaran-indonesia-terkonfirmasi"
+                                    >
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
                                     <p>Terkonfirmasi</p>
                                 </div>
                             </div>
@@ -150,19 +167,36 @@
                                 <img src="./icon/user-check.svg" alt="" />
                                 <!-- </div> -->
                                 <div class="covid-data">
-                                    <h2>6,039,873</h2>
+                                    <h2 id="api-sebaran-indonesia-dirawat">
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
                                     <p>Dirawat</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-lg">
                             <div class="card-3">
                                 <!-- <div class="col-lg"> -->
                                 <img src="./icon/user-minus.svg" alt="" />
                                 <!-- </div> -->
                                 <div class="covid-data">
-                                    <h2>6,039,873</h2>
+                                    <h2 id="api-sebaran-indonesia-sembuh">
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
                                     <p>Sembuh</p>
                                 </div>
                             </div>
@@ -174,8 +208,92 @@
                                 <img src="./icon/user-x.svg" alt="" />
                                 <!-- </div> -->
                                 <div class="covid-data">
-                                    <h2>6,039,873</h2>
+                                    <h2 id="api-sebaran-indonesia-meninggal">
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
                                     <p>Meninggal Dunia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 row">
+                        <div class="col-lg">
+                            <div class="card-3">
+                                <!-- <div class="col-lg"> -->
+                                <img
+                                    style="width: 60%"
+                                    src="./icon/user-check.svg"
+                                    alt=""
+                                />
+                                <!-- </div> -->
+                                <div class="covid-data">
+                                    <h2 id="api-sebaran-indonesia-test">
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
+                                    <p>Test dilakukan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="card-3">
+                                <!-- <div class="col-lg"> -->
+                                <img
+                                    style="width: 60%"
+                                    src="./icon/user-minus.svg"
+                                    alt=""
+                                />
+                                <!-- </div> -->
+                                <div class="covid-data">
+                                    <h2 id="api-sebaran-indonesia-populasi">
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
+                                    <p>Jumlah Populasi</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg">
+                            <div class="card-3">
+                                <!-- <div class="col-lg"> -->
+                                <img
+                                    style="width: 60%"
+                                    src="./icon/user-x.svg"
+                                    alt=""
+                                />
+                                <!-- </div> -->
+                                <div class="covid-data">
+                                    <h2 id="api-sebaran-indonesia-kritis">
+                                        <div
+                                            class="skeleton skeleton-text"
+                                            style="
+                                                width: 80%;
+                                                height: 32px;
+                                                margin: auto;
+                                            "
+                                        ></div>
+                                    </h2>
+                                    <p>Kritis</p>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +309,15 @@
                                 <div class="row">
                                     <div class="col-lg">
                                         <div class="vaccine-data">
-                                            <h2>198,191,838</h2>
+                                            <h2 id="api-sebaran-vaksinasi-1">
+                                                <div
+                                                    class="skeleton skeleton-text"
+                                                    style="
+                                                        width: 150px;
+                                                        height: 38px;
+                                                    "
+                                                ></div>
+                                            </h2>
                                             <p>Vaksinasi ke-1</p>
                                         </div>
                                     </div>
@@ -211,7 +337,15 @@
                                 <div class="row">
                                     <div class="col-lg">
                                         <div class="vaccine-data">
-                                            <h2>198,191,838</h2>
+                                            <h2 id="api-sebaran-vaksinasi-2">
+                                                <div
+                                                    class="skeleton skeleton-text"
+                                                    style="
+                                                        width: 150px;
+                                                        height: 38px;
+                                                    "
+                                                ></div>
+                                            </h2>
                                             <p>Vaksinasi ke-2</p>
                                         </div>
                                     </div>
@@ -232,15 +366,10 @@
             <section>
                 <!-- ini map sebaran -->
                 <div class="map-sebaran">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32657795.068552647!2d99.45139008247747!3d-2.3202549927082043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sid!2sid!4v1651240090531!5m2!1sid!2sid"
-                        width="100%"
-                        height="600"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                    <div
+                        id="map-sebaran"
+                        style="width: 100%; height: 500px"
+                    ></div>
                 </div>
             </section>
             <section>
@@ -344,6 +473,9 @@
         </footer>
 
         <script src="./js/script.js"></script>
+        <script>
+            glovid.sebaranScript()
+        </script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
