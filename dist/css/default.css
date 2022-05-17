@@ -1,6 +1,30 @@
-.slide-loading {
-    width: 200px !important;
-    height: 200px !important;
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+.img.skeleton {
+    padding: 150px;
+}
+.skeleton-text {
+    height: 1rem;
+}
+p.skeleton-text {
+    height: 1rem !important;
+}
+h4.skeleton-text {
+    height: 1.8rem !important;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.api-berita-terkini .card img {
+    width: 100%;
     aspect-ratio: 1/1;
-    position: absolute;
+    object-fit: cover;
 }

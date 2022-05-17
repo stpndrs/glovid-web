@@ -23,9 +23,9 @@
         />
         <link rel="stylesheet" href="./css/swiper.css" />
 
+        <link rel="stylesheet" href="./css/default.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/dark.css" />
-        <script src="./js/script.js" defer></script>
     </head>
 
     <body>
@@ -176,16 +176,10 @@
             <section>
                 <!-- Swiper JS -->
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
-                        <div class="swiper-slide">Slide 8</div>
-                        <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-wrapper api-news">
+                        <div class="swiper-slide loading">
+                            <img src="./icon/Blocks-1s-200px.svg" alt="" />
+                        </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -210,70 +204,82 @@
                     </div>
                 </div>
 
-                <div class="mt-3 row">
+                <div class="mt-3 row api-berita-terkini">
                     <div class="col-lg">
                         <div class="card">
-                            <div class="img"></div>
+                            <div class="img skeleton"></div>
                             <div class="container my-3">
-                                <p class="text-sm date">24 April 2022</p>
-                                <h4 class="font-bold title">
-                                    Lorem ipsum dolor sit amet.
-                                </h4>
-                                <p class="content">
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ipsa id distinctio vitae!
-                                    Suscipit inventore molestiae earum qui
-                                    aliquam ex! Ex, ab laborum. Rem temporibus,
-                                    minima quae provident eaque blanditiis?
-                                    Velit.
-                                </p>
+                                <p
+                                    class="text-sm date skeleton skeleton-text"
+                                    style="width: 100px"
+                                ></p>
+                                <h4
+                                    class="mb-4 font-bold title skeleton skeleton-text"
+                                ></h4>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
                                 <br />
-                                <br />
-                                <a href="#" class="btn">Selengkapnya</a>
+                                <h4
+                                    class="skeleton-text skeleton"
+                                    style="width: 25%"
+                                ></h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg">
                         <div class="card">
-                            <div class="img"></div>
+                            <div class="img skeleton"></div>
                             <div class="container my-3">
-                                <p class="text-sm date">24 April 2022</p>
-                                <h4 class="font-bold title">
-                                    Lorem ipsum dolor sit amet.
-                                </h4>
-                                <p class="content">
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ipsa id distinctio vitae!
-                                    Suscipit inventore molestiae earum qui
-                                    aliquam ex! Ex, ab laborum. Rem temporibus,
-                                    minima quae provident eaque blanditiis?
-                                    Velit.
-                                </p>
+                                <p
+                                    class="text-sm date skeleton skeleton-text"
+                                    style="width: 100px"
+                                ></p>
+                                <h4
+                                    class="mb-4 font-bold title skeleton skeleton-text"
+                                ></h4>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
+                                <div
+                                    class="mb-2 skeleton-text skeleton"
+                                    style="width: 100%"
+                                ></div>
                                 <br />
-                                <br />
-                                <a href="#" class="btn">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg">
-                        <div class="card">
-                            <div class="img"></div>
-                            <div class="container my-3">
-                                <p class="text-sm date">24 April 2022</p>
-                                <h4 class="font-bold title">
-                                    Lorem ipsum dolor sit amet.
-                                </h4>
-                                <p class="content">
-                                    Lorem, ipsum dolor sit amet consectetur
-                                    adipisicing elit. Ipsa id distinctio vitae!
-                                    Suscipit inventore molestiae earum qui
-                                    aliquam ex! Ex, ab laborum. Rem temporibus,
-                                    minima quae provident eaque blanditiis?
-                                    Velit.
-                                </p>
-                                <br />
-                                <br />
-                                <a href="#" class="btn">Selengkapnya</a>
+                                <h4
+                                    class="skeleton-text skeleton"
+                                    style="width: 25%"
+                                ></h4>
                             </div>
                         </div>
                     </div>
@@ -285,7 +291,13 @@
             <section>
                 <div class="row">
                     <h3 class="font-bold">Data Sebaran</h3>
-                    <p class="date">Update Terakhir: 24-04-2022</p>
+                    <p class="date">
+                        Update Terakhir:
+                        <span
+                            class="api-sebaran-update_terakhir skeleton skeleton-text"
+                            style="width: 150px"
+                        ></span>
+                    </p>
                 </div>
 
                 <div class="global">
@@ -293,20 +305,66 @@
                     <div class="text-center row">
                         <div class="col-lg">
                             <div class="card">
-                                <h4 class="font-bold">230</h4>
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-global-negara"
+                                ></h4>
                                 <p>Negara</p>
                             </div>
                         </div>
                         <div class="col-lg">
                             <div class="card">
-                                <h4 class="font-bold">505.817.953</h4>
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-global-terkonfirmasi"
+                                >
+                                    505.817.953
+                                </h4>
                                 <p>Terkonfirmasi</p>
                             </div>
                         </div>
                         <div class="col-lg">
                             <div class="card">
-                                <h4 class="font-bold">6.213.876</h4>
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-global-meninggal"
+                                >
+                                    6.213.876
+                                </h4>
                                 <p>Meninggal Dunia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center row">
+                        <div class="col-lg">
+                            <div class="card">
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-global-test"
+                                ></h4>
+                                <p>Test dilakukan</p>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="card">
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-global-populasi"
+                                >
+                                    505.817.953
+                                </h4>
+                                <p>Populasi dunia</p>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="card">
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-global-sembuh"
+                                >
+                                    6.213.876
+                                </h4>
+                                <p>Sembuh</p>
                             </div>
                         </div>
                     </div>
@@ -317,20 +375,68 @@
                     <div class="text-center row">
                         <div class="col-lg">
                             <div class="card">
-                                <h4 class="font-bold">6.043.768</h4>
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-indonesia-positif"
+                                >
+                                    6.043.768
+                                </h4>
                                 <p>Positif</p>
                             </div>
                         </div>
                         <div class="col-lg">
                             <div class="card">
-                                <h4 class="font-bold">5.868.251</h4>
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-indonesia-sembuh"
+                                >
+                                    5.868.251
+                                </h4>
                                 <p>Sembuh</p>
                             </div>
                         </div>
                         <div class="col-lg">
                             <div class="card">
-                                <h4 class="font-bold">156.067</h4>
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-indonesia-meninggal"
+                                >
+                                    156.067
+                                </h4>
                                 <p>Meninggal Dunia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center row">
+                        <div class="col-lg">
+                            <div class="card">
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-indonesia-test"
+                                ></h4>
+                                <p>Test dilakukan</p>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="card">
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-indonesia-populasi"
+                                >
+                                    505.817.953
+                                </h4>
+                                <p>Jumlah Populasi</p>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="card">
+                                <h4
+                                    class="font-bold"
+                                    id="api-sebaran-indonesia-kritis"
+                                >
+                                    6.213.876
+                                </h4>
+                                <p>Sembuh</p>
                             </div>
                         </div>
                     </div>
@@ -463,6 +569,7 @@
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <!-- Initialize Swiper -->
+        <script src="./js/script.js"></script>
         <script>
             var swiper = new Swiper('.mySwiper', {
                 spaceBetween: 30,
@@ -480,6 +587,7 @@
                     prevEl: '.swiper-button-prev',
                 },
             })
+            glovid.homepageScript()
         </script>
 
         <script>

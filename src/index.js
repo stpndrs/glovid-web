@@ -1,15 +1,18 @@
-export const setDarkMode = () => {
-    let emoticon = ''
-    let isDark = document.body.classList.toggle('dark')
+import { setDarkModeOn } from './dark_mode'
 
-    if (isDark) {
-        emoticon = '<i class="bi bi-brightness-high"></i>'
-        localStorage.setItem('theme', 'dark')
-    } else {
-        emoticon = '<i class="bi bi-moon"></i>'
-        localStorage.removeItem('theme')
-    }
-    document.getElementById('darkBtn').innerHTML = emoticon
+import { refreshNewsCarousel } from './news_carousel'
+import { refreshBeritaTerkini } from './berita_terkini'
+import { refreshSebaranGlobal, refreshSebaranIndonesia } from './sebaran'
+
+// Dark Mode
+if (localStorage.getItem('theme') == 'dark') setDarkModeOn()
+export const setDarkMode = setDarkModeOn
+
+export const homepageScript = () => {
+    refreshNewsCarousel()
+
+    refreshBeritaTerkini()
+
+    refreshSebaranGlobal()
+    refreshSebaranIndonesia()
 }
-
-if (localStorage.getItem('theme') == 'dark') setDarkMode()

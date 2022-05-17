@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 h1 {
@@ -30,7 +30,7 @@ h6 {
 }
 
 a {
-    color: #FFC727;
+    color: #ffc727;
     text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #0A0E1B;
+    background-color: #0a0e1b;
 }
 
 #container {
@@ -64,14 +64,14 @@ section {
 
 .card {
     padding: 10px;
-    background-color: #0F1528;
+    background-color: #0f1528;
     border-radius: 10px;
     color: white;
 }
 
 .card-2 {
     padding: 30px;
-    background-color: #0F1528;
+    background-color: #0f1528;
     border-radius: 10px;
     color: white;
     height: 100%;
@@ -83,7 +83,7 @@ section {
     background-color: #101222;
     border-radius: 10px;
     color: white;
-    border: .1px solid white;
+    border: 0.1px solid white;
     vertical-align: middle;
     text-align: center;
 }
@@ -121,7 +121,7 @@ section {
 }
 
 .card-3 p {
-    color: #FFC727;
+    color: #ffc727;
     margin-bottom: 0;
     font-size: x-large;
 }
@@ -168,7 +168,6 @@ section {
 
 .img {
     /* margin: -20px -20px 20px -20px; */
-    padding: 20vh;
     border-radius: 10px 10px 0 0;
     background-color: gray;
 }
@@ -189,7 +188,6 @@ nav {
 }
 
 @media (max-width: 991.98px) {
-
     .card,
     .card-2,
     .card-3 {
@@ -217,7 +215,7 @@ nav {
 
 @media (max-width: 350px) {
     .navbarMobile .perNavbarMobile h3 {
-        font-size: .7rem !important;
+        font-size: 0.7rem !important;
     }
 
     .navbarMobile .perNavbarMobile .icon {
@@ -239,7 +237,7 @@ nav {
 }
 
 .navbarMobile .perNavbarMobile {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     height: 100%;
     display: flex;
     align-items: center;
@@ -248,7 +246,6 @@ nav {
     text-align: center;
 }
 
-
 .navbarMobile .perNavbarMobile .icon {
     font-size: 1.5rem;
     color: #000;
@@ -256,14 +253,14 @@ nav {
 }
 
 .navbarMobile .perNavbarMobile h3 {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
     color: #000;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
 .navbarMobile .perNavbarMobile:hover {
-    opacity: .8;
+    opacity: 0.8;
 }
 
 /* Translate Box */
@@ -276,17 +273,20 @@ nav {
     bottom: 100px;
     min-width: 200px;
     min-height: 40px;
-    background: #0F1528;
+    background: #0f1528;
     transform: translateX(77%);
     z-index: 50;
-    transition: transform .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    box-shadow: -5px -5px 5px rgb(212 212 212 / 10%), 5px 5px 5px rgb(0 0 0 / 40%);
-    -webkit-box-shadow: -5px -5px 5px rgb(212 212 212 / 10%), 5px 5px 5px rgb(0 0 0 / 40%);
-    -moz-box-shadow: -5px -5px 5px rgba(212, 212, 212, .1), 5px 5px 5px rgba(0, 0, 0, .4);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: -5px -5px 5px rgb(212 212 212 / 10%),
+        5px 5px 5px rgb(0 0 0 / 40%);
+    -webkit-box-shadow: -5px -5px 5px rgb(212 212 212 / 10%),
+        5px 5px 5px rgb(0 0 0 / 40%);
+    -moz-box-shadow: -5px -5px 5px rgba(212, 212, 212, 0.1),
+        5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .translate-box .translator {
-    background: #0F1528;
+    background: #0f1528;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -294,9 +294,12 @@ nav {
     border-radius: 50%;
     min-width: 33px;
     transition: box-shadow 0.2s ease-in-out;
-    box-shadow: -5px -5px 5px rgb(212 212 212 / 0%), 5px 5px 5px rgb(0 0 0 / 40%);
-    -webkit-box-shadow: -5px -5px 5px rgb(212 212 212 / 0%), 5px 5px 5px rgb(0 0 0 / 40%);
-    -moz-box-shadow: -5px -5px 5px rgba(212, 212, 212, .1), 5px 5px 5px rgba(0, 0, 0, .4);
+    box-shadow: -5px -5px 5px rgb(212 212 212 / 0%),
+        5px 5px 5px rgb(0 0 0 / 40%);
+    -webkit-box-shadow: -5px -5px 5px rgb(212 212 212 / 0%),
+        5px 5px 5px rgb(0 0 0 / 40%);
+    -moz-box-shadow: -5px -5px 5px rgba(212, 212, 212, 0.1),
+        5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 .translate-box.active {
@@ -309,7 +312,7 @@ nav {
     padding: 10px;
     border-radius: 50%;
     object-fit: cover;
-    transition: box-shadow .3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 /* NAVBAR END */
@@ -327,7 +330,7 @@ nav {
 }
 
 .glovid-app .row {
-    background-color: #0F1528;
+    background-color: #0f1528;
     padding: 100px;
     border-radius: 10px;
 }
@@ -336,7 +339,6 @@ nav {
     font-family: 'Podkova', serif;
     font-weight: bold;
 }
-
 
 @media (max-width: 767.98px) {
     .glovid-app {
@@ -360,7 +362,7 @@ nav {
     margin-top: 20px;
 }
 .chart-title p {
-    color: #FFC727;
+    color: #ffc727;
     font-size: small;
 }
 /* CHART JS END */

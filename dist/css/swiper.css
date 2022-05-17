@@ -2,12 +2,13 @@
     width: 100%;
     height: 100%;
 }
-
+.swiper-pagination-bullet {
+    background: white;
+}
 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: rgb(177, 177, 177);
-    padding: 200px;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -27,6 +28,87 @@
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
+    max-height: 400px;
     object-fit: cover;
+}
+
+.swiper-slide.loading img {
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+}
+.swiper-wrapper {
+    min-height: 400px;
+    background: #b1b1b1;
+}
+
+.swiper-slide .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 16px;
+    color: white;
+}
+.swiper-slide .caption a {
+    color: white !important;
+}
+
+.swiper-slide .caption * {
+    z-index: 10;
+    position: relative;
+}
+
+.swiper-slide .caption h3 {
+    font-size: 20px !important;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.swiper-slide .caption p {
+    font-size: 14px !important;
+    color: #b1b1b1;
+}
+
+.swiper-slide .caption .badge i {
+    margin-right: 4px;
+    color: black;
+}
+.swiper-slide .caption .badge {
+    padding: 4px 8px;
+    margin-right: 4px;
+}
+.swiper-slide .caption .badge-yellow {
+    background-color: #ffce43;
+    color: black;
+}
+.swiper-slide .caption .badge-red i,
+.swiper-slide .caption .badge-red {
+    background-color: #ff005e;
+    color: white;
+}
+.swiper-slide .caption .badges {
+    font-size: 13px !important;
+    margin-bottom: 12px;
+    color: #b1b1b1;
+}
+
+.swiper-slide .caption::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, black, transparent);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 150%;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .swiper-wrapper {
+        min-height: 200px;
+    }
+    .phone-none {
+        display: none;
+    }
 }
