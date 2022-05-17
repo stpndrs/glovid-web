@@ -24,4 +24,16 @@ module.exports = {
             return res.send(error.response.data)
         }
     },
+
+    statsByProvince: async (req, res) => {
+        try {
+            const response = await axios.get(
+                'https://data.covid19.go.id/public/api/prov.json'
+            )
+            return res.json(response.data)
+        } catch (error) {
+            console.log(error)
+            return res.send(error.response.data)
+        }
+    },
 }

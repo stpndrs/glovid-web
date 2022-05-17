@@ -9,6 +9,7 @@ import {
     refreshVaksinasi,
 } from './sebaran'
 import { refreshNewsPage } from './news_page'
+import { initMap } from './maps'
 
 // Dark Mode
 if (localStorage.getItem('theme') == 'dark') setDarkModeOn()
@@ -30,4 +31,5 @@ export const beritaScript = () => {
 export const sebaranScript = () => {
     refreshSebaranPageIndonesia()
     refreshVaksinasi()
+    initMap()
 }
