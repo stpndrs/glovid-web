@@ -1,11 +1,6 @@
-import axios from 'axios'
 import moment from 'moment'
-import { BASE_URL } from './constant'
+import { getBeritaTerkini } from './fetch/news'
 
-export const getBeritaTerkini = async () => {
-    const response = await axios.get(`${BASE_URL}/api/news/covid19`, {})
-    return response.data
-}
 export const refreshBeritaTerkini = async () => {
     const newsBeritaTerkini = document.querySelector('.api-berita-terkini')
     const response = await getBeritaTerkini()

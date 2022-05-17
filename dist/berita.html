@@ -21,8 +21,7 @@
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="./css/swiper.css" />
-
+        <link rel="stylesheet" href="./css/default.css" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/dark.css" />
     </head>
@@ -132,7 +131,7 @@
             <div class="input-group search">
                 <input
                     type="text"
-                    class="form-control"
+                    class="form-control api-news-page-search"
                     placeholder="Pencarian...."
                 />
                 <button
@@ -145,7 +144,7 @@
             </div>
 
             <section>
-                <div class="row">
+                <div class="row api-news-page-list">
                     <div class="mb-3 col-lg">
                         <div class="card">
                             <div class="img"></div>
@@ -712,6 +711,9 @@
         </footer>
 
         <script src="./js/script.js"></script>
+        <script>
+            glovid.beritaScript()
+        </script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
