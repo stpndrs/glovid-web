@@ -8,7 +8,8 @@
         "build": "webpack",
         "watch": "webpack --watch",
         "server-watch": "nodemon api/server",
-        "server-start": "node api/server"
+        "server-start": "node api/server",
+        "app": "http-server ./dist"
     },
     "repository": {
         "type": "git",
@@ -23,9 +24,12 @@
     "homepage": "https://github.com/stpndrs/glovid-web#readme",
     "dependencies": {
         "axios": "^0.27.2",
+        "chart.js": "^3.7.1",
         "cors": "^2.8.5",
         "countup.js": "^2.1.0",
+        "dotenv": "^16.0.1",
         "express": "^4.18.1",
+        "http-server": "^14.1.0",
         "leaflet": "^1.8.0",
         "moment": "^2.29.3",
         "rss-parser": "^3.12.0",
