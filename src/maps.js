@@ -37,7 +37,5 @@ export const initMap = async () => {
                     meninggal: ${item.jumlah_meninggal.toLocaleString()} orang <br/>
                 `
             )
-
-        console.log((item.jumlah_dirawat / 1030) * 100 + 30)
     })
 }

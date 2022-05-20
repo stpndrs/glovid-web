@@ -11,3 +11,12 @@ export const statsByProvinsi = async () => {
         console.error(error)
     }
 }
+
+export const statsByHarian = async () => {
+    try {
+        const response = await axios.get(`${BASE_URL}/api/stats/stats_daily`)
+        return response.data
+    } catch (error) {
+        console.error(error)
+    }
+}
