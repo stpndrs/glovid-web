@@ -10,7 +10,9 @@ export const refreshBeritaTerkini = async () => {
         contentBeritaTerkini += `<div class="col-lg col-md-6 mb-4">
             <div class="card">
                 <div class="img">
-                    <img src="${item.enclosure.url}" alt="">
+                    <img src="${
+                        item.enclosure.url
+                    }" class="skeleton" style="height: 190px" alt="">
                 </div>
                 <div class="container my-3">
                     <p class="text-sm date">

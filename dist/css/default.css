@@ -1,9 +1,6 @@
 .skeleton {
     animation: skeleton-loading 1s linear infinite alternate;
 }
-.img.skeleton {
-    padding: 150px;
-}
 .skeleton-text {
     height: 1rem;
 }
@@ -35,7 +32,9 @@ h4.skeleton-text {
     max-height: 190px;
     object-fit: cover;
 }
-
+.card img {
+    height: 190px;
+}
 .spin {
     animation: rotating 1s ease-in-out alternate infinite;
 }
