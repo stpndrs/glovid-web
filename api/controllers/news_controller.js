@@ -1,4 +1,3 @@
-const axios = require('axios')
 const Parser = require('rss-parser')
 const parser = new Parser({
     headers: {
@@ -13,6 +12,8 @@ module.exports = {
             let page = parseInt(req.query.page)
             let limit = parseInt(req.query.limit)
             let offset = parseInt(req.query.offset)
+            const search = req.query.search
+
             if (!page) page = 1
             if (!limit) limit = 50
             if (!offset) offset = limit * (page - 1)
@@ -31,6 +32,13 @@ module.exports = {
             if (covid19News.length % limit > 0) totalPages++
 
             let covid19NewsOps = covid19News.slice()
+            if (search) {
+                covid19NewsOps = covid19NewsOps.filter((item) => {
+                    return item.title
+                        .toLowerCase()
+                        .includes(search.toLowerCase())
+                })
+            }
             return res.json({
                 status: 'OK',
                 code: 200,
