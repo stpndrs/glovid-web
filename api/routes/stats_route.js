@@ -8,5 +8,6 @@ router.get('/global', statsController.global)
 router.get('/indonesia', statsController.indonesia)
 router.get('/vaccination', vaccinationController.covidGoID)
 router.get('/stats_provinces', statsController.statsByProvince)
+router.get('/stats_daily', statsController.statsByDaily)
 
 module.exports = router

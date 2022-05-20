@@ -36,4 +36,16 @@ module.exports = {
             return res.send(error.response.data)
         }
     },
+
+    statsByDaily: async (req, res) => {
+        try {
+            const response = await axios.get(
+                'https://data.covid19.go.id/public/api/update.json'
+            )
+            return res.json(response.data)
+        } catch (error) {
+            console.log(error)
+            return res.send(error.response.data)
+        }
+    },
 }
