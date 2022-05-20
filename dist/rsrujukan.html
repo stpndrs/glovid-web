@@ -15,13 +15,19 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+            integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+            crossorigin=""
+        />
 
         <!-- Link Swiper's CSS -->
         <link
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="./css/swiper.css" />
+        <link rel="stylesheet" href="./css/default.css" />
 
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/dark.css" />
@@ -130,7 +136,7 @@
             <div class="input-group search">
                 <input
                     type="text"
-                    class="form-control"
+                    class="form-control api-search-input"
                     placeholder="Pencarian...."
                 />
                 <button
@@ -143,222 +149,14 @@
             </div>
 
             <section>
-                <div class="row">
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-lg">
-                        <div class="card">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.1634159731243!2d106.89799291471611!3d-6.108687395576733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1f8d8ae3650f%3A0x43e4b550e0ceabae!2sRSUD%20Koja!5e0!3m2!1sid!2sid!4v1651501100909!5m2!1sid!2sid"
-                                height="200"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                            <div class="container my-3">
-                                <h4 class="font-bold title">RSUD Koya</h4>
-                                <p class="alamat">
-                                    JALAN DELI NO. 4 TANJUNG PRIOK JAKARTA 14220
-                                </p>
-                                <p class="notlp">(021) 43938478</p>
-                                <p class="tipe">Tipe : RS_RUJUKAN_PROVINSI</p>
-                                <p class="tempat-tidur">
-                                    Sisa Tempat Tidur: <b>0</b> Tempat Tidur
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row api-rujukan-rs"></div>
+                <div
+                    class="mt-4 loading skeleton skeleton-text d-flex align-items-center justify-content-center"
+                    style="width: 50%; height: 4rem; margin: auto"
+                >
+                    <h3 class="mb-0" style="font-weight: bold; color: #9c9c9c">
+                        LOADING MORE...
+                    </h3>
                 </div>
             </section>
         </div>
@@ -396,6 +194,9 @@
         </footer>
 
         <script src="./js/script.js"></script>
+        <script>
+            glovid.rsRujukanScript()
+        </script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
