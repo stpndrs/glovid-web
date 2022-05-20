@@ -1,5 +1,5 @@
 .dark {
-    background-color: #090B1F;
+    background-color: #090b1f;
     color: white;
 }
 
@@ -14,17 +14,17 @@
 }
 
 .active {
-    color: #FFC727 !important;
+    color: #ffc727 !important;
 }
 
 .dark .glov-white {
     display: block !important;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .dark .glov-dark {
     display: none;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 #darkBtn {
@@ -42,7 +42,8 @@
 
 /* CHART JS START */
 .dark canvas {
-    background-color: rgba(255, 255, 255, 0.074);
+    background-color: rgb(17, 18, 38);
+    box-shadow: 0 10px 60px #0a0b1a;
 }
 /* CHART JS END */
 
@@ -50,6 +51,7 @@
     border: 1px solid #ffffff;
 }
 
-.dark .card-4 .title, .dark .breadcrumb {
+.dark .card-4 .title,
+.dark .breadcrumb {
     background-color: #101222;
 }
