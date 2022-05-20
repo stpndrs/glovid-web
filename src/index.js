@@ -70,6 +70,7 @@ export const homepageScript = () => {
 
     refreshSebaranGlobal()
     refreshSebaranIndonesia()
+    initMap()
 }
 
 export const beritaScript = () => {

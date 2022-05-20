@@ -3,8 +3,15 @@ import { statsByProvinsi } from './fetch/statistics'
 
 export const initMap = async () => {
     // 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2lsZGFuaWUxMiIsImEiOiJjbDNhMHVxNG4wMTFvM2NsejFqb2lpNzIxIn0.7TsUzT4wb_VofZPu-KecPw',
-    let map = L.map('map-sebaran').setView([-2, 118], 5.49)
-
+    let map = L.map('map-sebaran', {
+        zoomControl: false,
+    }).setView([-2, 118], 5.49)
+    map.touchZoom.disable()
+    map.doubleClickZoom.disable()
+    map.scrollWheelZoom.disable()
+    map.boxZoom.disable()
+    map.keyboard.disable()
+    map.dragging.disable()
     const tiles = L.tileLayer(
         'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
         {
