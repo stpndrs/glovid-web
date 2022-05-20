@@ -9,7 +9,7 @@
         "watch": "webpack --watch",
         "server-watch": "nodemon api/server",
         "server-start": "node api/server",
-        "app": "http-server ./dist"
+        "app": "http-server ./dist --port ${npm_config_app_port}"
     },
     "repository": {
         "type": "git",
