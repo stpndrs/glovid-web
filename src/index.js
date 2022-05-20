@@ -8,7 +8,7 @@ import {
     refreshSebaranPageIndonesia,
     refreshVaksinasi,
 } from './sebaran'
-import { refreshNewsPage } from './news_page'
+import { onMount as onNewsMount, refreshNewsPage } from './news_page'
 import { initMap } from './maps'
 import { initChart, refreshDailyStats, refreshProvinceStats } from './chart'
 import { onMount as onRsRujukanMount, refreshRujukanRS } from './rs_rujukan'
@@ -73,7 +73,7 @@ export const homepageScript = () => {
 }
 
 export const beritaScript = () => {
-    refreshNewsPage()
+    onNewsMount()
 }
 
 export const sebaranScript = () => {

@@ -2,26 +2,91 @@ import { getBeritaTerkini } from './fetch/news'
 import moment from 'moment'
 
 const newsListCtx = document.querySelector('.api-news-page-list')
-var newsList = []
+/**
+ * @type {HTMLElement}
+ */
+const newsListLoadingCtx = document.querySelector('.loading')
+let newsLoading = false
+let newsPage = 1
+let newsTotalPages = 1
+let newsLimit = 9
 
-export const refreshNewsPage = async (newsListFiltered = false) => {
-    if (newsList.length <= 0) {
-        try {
-            const response = await getBeritaTerkini()
-            newsList = response.data.items
-        } catch (error) {
-            console.error(error)
+export const onMount = () => {
+    newsListCtx.innerHTML = ''
+    refreshNewsPage()
+    document.addEventListener('scroll', onNewsScroll)
+
+    /**
+     * @type {HTMLElement}
+     */
+    const searchInput = document.querySelector('.api-news-page-search')
+
+    let searchInputPollID = -1
+    searchInput.addEventListener('input', (e) => {
+        let previousKeyword = ''
+        if (searchInputPollID < 0) {
+            let leaveCounter = 0
+            searchInputPollID = setInterval(() => {
+                let searchKeyword = searchInput.value
+                if (searchKeyword != previousKeyword) {
+                    newsListCtx.innerHTML = ''
+                    newsPage = 1
+                    refreshNewsPage(searchKeyword)
+                    previousKeyword = searchKeyword
+                } else {
+                    leaveCounter++
+                }
+                console.log(`Tick ${leaveCounter}`)
+                if (leaveCounter >= 6) {
+                    clearInterval(searchInputPollID)
+                    searchInputPollID = -1
+                }
+            }, 500)
+        }
+        if (e.target.value == '') {
+            newsListCtx.innerHTML = ''
+            newsPage = 1
+            refreshNewsPage()
+        }
+    })
+}
+
+export const onNewsScroll = (e) => {
+    let offsetBottom =
+        parseInt(document.body.scrollHeight) - parseInt(window.scrollY)
+
+    if (offsetBottom <= 1400) {
+        if (!newsLoading) {
+            newsPage++
+            if (newsPage > newsTotalPages) {
+                hideLoading()
+                return
+            }
+            showLoading()
+            setTimeout(() => {
+                refreshNewsPage()
+            }, 500)
         }
     }
-    let newsListDisplay = newsList
-    if (newsListFiltered) newsListDisplay = newsListFiltered
+}
 
-    let content = ``
-    newsListDisplay.forEach((item, index) => {
-        content += `
-            <div class="mb-3 col-lg-4 col-md-6">
+export const refreshNewsPage = async (search = false) => {
+    try {
+        showLoading()
+        const response = await getBeritaTerkini(
+            newsPage,
+            newsLimit,
+            false,
+            search
+        )
+        newsTotalPages = response.pagination.total_pages
+        const fragment = document.createDocumentFragment()
+        response.data.forEach((item, index) => {
+            const divItem = document.createElement('div')
+            divItem.classList.add('mb-3', 'col-lg-4', 'col-md-6')
+            divItem.innerHTML = `
                 <div class="card">
-                    <div class="img">
+                    <div class="img skeleton">
                         <img src="${item.enclosure.url}">
                     </div>
                     <div class="container my-3">
@@ -38,20 +103,22 @@ export const refreshNewsPage = async (newsListFiltered = false) => {
                         <a href="${item.link}" class="btn">Selengkapnya</a>
                     </div>
                 </div>
-            </div>
-        `
-    })
-    newsListCtx.innerHTML = content
+            `
+            fragment.appendChild(divItem)
+        })
+        newsListCtx.appendChild(fragment)
+        hideLoading()
+    } catch (error) {
+        console.error(error)
+    }
 }
 
-const searchInput = document.querySelector('.api-news-page-search')
-if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-        let newsListFiltered = newsList.filter((item, index) => {
-            return item.title
-                .toLowerCase()
-                .includes(e.target.value.toLowerCase())
-        })
-        refreshNewsPage(newsListFiltered)
-    })
+const showLoading = () => {
+    newsLoading = true
+    newsListLoadingCtx.style.display = 'flex'
+}
+
+const hideLoading = () => {
+    newsLoading = false
+    newsListLoadingCtx.style.display = 'none'
 }
