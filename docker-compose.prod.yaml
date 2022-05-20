@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+    app:
+        build:
+            dockerfile: Dockerfile.app
+            context: .
+            args:
+                - APP_PORT=${APP_PORT}
+        container_name: glovid_app
+        restart: always
+        ports:
+            - ${APP_PORT}:${APP_PORT}
+        networks:
+            - glovid
+        depends_on:
+            - server
+
+    server:
+        build:
+            dockerfile: Dockerfile.server
+            context: .
+        container_name: glovid_server
+        restart: always
+        ports:
+            - ${SERVER_PORT}:${SERVER_PORT}
+        networks:
+            - glovid
+
+networks:
+    glovid:
