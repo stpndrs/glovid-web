@@ -1,4 +1,5 @@
 const path = require('path')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
     mode: 'development',
@@ -8,4 +9,5 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/js'),
         library: 'glovid',
     },
+    plugins: [new Dotenv()],
 }
