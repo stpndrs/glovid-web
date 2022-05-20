@@ -21,7 +21,7 @@
             rel="stylesheet"
             href="https://unpkg.com/swiper/swiper-bundle.min.css"
         />
-        <link rel="stylesheet" href="./css/swiper.css" />
+        <link rel="stylesheet" href="./css/default.css" />
 
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/dark.css" />
@@ -121,7 +121,7 @@
             <div class="input-group search">
                 <input
                     type="text"
-                    class="form-control"
+                    class="form-control api-search"
                     placeholder="Pencarian...."
                 />
                 <button
@@ -133,98 +133,24 @@
                 </button>
             </div>
 
-            <section>
-                <div class="mb-3 card">
-                    <div class="mb-4 row align-items-stretch">
-                        <div
-                            class="text-center col-sm-12 col-lg-3 col-md-3 col-12 d-flex justify-content-center align-items-center flex-rows flex-md-column"
-                        >
-                            <img
-                                src="https://source.unsplash.com/256x256/?coffee"
-                                alt=""
-                                style="max-height: 144px"
-                            />
-                            <h5
-                                class="mt-3 mb-0 text-center ms-4 ms-md-0 fw-bold"
-                            >
-                                Provinsi DKI Jakarta
-                            </h5>
-                        </div>
-                        <div class="col-sm-12 col-lg-9 col-md-9 col-12">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 col-6">
-                                    <div class="card-3">
-                                        <!-- <div class="col-lg"> -->
-                                        <img
-                                            src="./icon/user-plus.svg"
-                                            alt=""
-                                        />
-                                        <!-- </div> -->
-                                        <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Terkonfirmasi</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6 col-6">
-                                    <div class="card-3">
-                                        <!-- <div class="col-lg"> -->
-                                        <img
-                                            src="./icon/user-check.svg"
-                                            alt=""
-                                        />
-                                        <!-- </div> -->
-                                        <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Dirawat</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6 col-6">
-                                    <div class="card-3">
-                                        <!-- <div class="col-lg"> -->
-                                        <img
-                                            src="./icon/user-minus.svg"
-                                            alt=""
-                                        />
-                                        <!-- </div> -->
-                                        <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Sembuh</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-6 col-6">
-                                    <div class="card-3">
-                                        <!-- <div class="col-lg"> -->
-                                        <img src="./icon/user-x.svg" alt="" />
-                                        <!-- </div> -->
-                                        <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Meninggal Dunia</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section class="api-list-province">
+                <div
+                    class="mb-3 card"
+                    style="background-color: rgba(15, 21, 40, 0.5)"
+                >
                     <div class="row align-items-stretch">
                         <div
                             class="text-center col-sm-12 col-lg-3 col-md-3 col-12 d-flex justify-content-center align-items-center flex-rows flex-md-column"
                         >
                             <img
-                                src="https://source.unsplash.com/256x256/?coffee"
+                                src="./icon/Blocks-1s-200px.svg"
                                 alt=""
-                                style="max-height: 144px"
+                                style="width: 100px"
                             />
                             <h5
-                                class="mt-3 mb-0 text-center ms-4 ms-md-0 fw-bold"
-                            >
-                                Provinsi DKI Jakarta
-                            </h5>
+                                class="mt-3 mb-0 text-center ms-4 ms-md-0 fw-bold skeleton skeleton-text"
+                                style="width: 200px"
+                            ></h5>
                         </div>
                         <div class="col-sm-12 col-lg-9 col-md-9 col-12">
                             <div class="row">
@@ -237,8 +163,11 @@
                                         />
                                         <!-- </div> -->
                                         <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Terkonfirmasi</p>
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -252,8 +181,11 @@
                                         />
                                         <!-- </div> -->
                                         <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Dirawat</p>
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -267,8 +199,11 @@
                                         />
                                         <!-- </div> -->
                                         <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Sembuh</p>
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -279,8 +214,11 @@
                                         <img src="./icon/user-x.svg" alt="" />
                                         <!-- </div> -->
                                         <div class="covid-data">
-                                            <h2>6,039,873</h2>
-                                            <p>Meninggal Dunia</p>
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -324,7 +262,9 @@
         </footer>
 
         <script src="./js/script.js"></script>
-
+        <script>
+            glovid.provinceScript()
+        </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -333,238 +273,6 @@
 
         <script>
             feather.replace()
-        </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-        <script>
-            const pos = document.getElementById('positifday').getContext('2d')
-            const positifday = new Chart(pos, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow',
-                        'Green',
-                        'Purple',
-                        'Orange',
-                    ],
-                    datasets: [
-                        {
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)',
-                            ],
-                            borderWidth: 1,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            })
-        </script>
-        <script>
-            const neg = document.getElementById('negatifday').getContext('2d')
-            const negatifday = new Chart(neg, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow',
-                        'Green',
-                        'Purple',
-                        'Orange',
-                    ],
-                    datasets: [
-                        {
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)',
-                            ],
-                            borderWidth: 1,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            })
-        </script>
-        <script>
-            const death = document.getElementById('deathday').getContext('2d')
-            const deathday = new Chart(death, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow',
-                        'Green',
-                        'Purple',
-                        'Orange',
-                    ],
-                    datasets: [
-                        {
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)',
-                            ],
-                            borderWidth: 1,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            })
-        </script>
-        <script>
-            const mix = document.getElementById('mixeddata').getContext('2d')
-            const mixeddata = new Chart(mix, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow',
-                        'Green',
-                        'Purple',
-                        'Orange',
-                    ],
-                    datasets: [
-                        {
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)',
-                            ],
-                            borderWidth: 1,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            })
-        </script>
-        <script>
-            const prov = document.getElementById('provdata').getContext('2d')
-            const provdata = new Chart(prov, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow',
-                        'Green',
-                        'Purple',
-                        'Orange',
-                    ],
-                    datasets: [
-                        {
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)',
-                            ],
-                            borderWidth: 1,
-                        },
-                    ],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        },
-                    },
-                },
-            })
         </script>
     </body>
 </html>

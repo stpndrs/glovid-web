@@ -11,7 +11,8 @@ import {
 import { refreshNewsPage } from './news_page'
 import { initMap } from './maps'
 import { initChart, refreshDailyStats, refreshProvinceStats } from './chart'
-import { onMount, refreshRujukanRS } from './rs_rujukan'
+import { onMount as onRsRujukanMount, refreshRujukanRS } from './rs_rujukan'
+import { onMount as onProvinsiMount, refreshProvinsi } from './provinsi'
 
 let sebaranCharts = {}
 
@@ -120,6 +121,11 @@ export const sebaranScript = () => {
 }
 
 export const rsRujukanScript = () => {
-    onMount()
+    onRsRujukanMount()
     refreshRujukanRS()
+}
+
+export const provinceScript = () => {
+    onProvinsiMount()
+    refreshProvinsi()
 }
