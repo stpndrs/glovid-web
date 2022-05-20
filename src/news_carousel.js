@@ -1,38 +1,27 @@
-import axios from 'axios'
 import moment from 'moment'
-import { BASE_URL } from './constant'
+import { getBeritaTerkini } from './fetch/news'
 
-export const getNewsCarousel = async () => {
-    const response = await axios.get(`${BASE_URL}/api/news/covid19`, {})
-    return response.data
-}
 export const refreshNewsCarousel = async () => {
     const newsCarousel = document.querySelector('.api-news')
-    const response = await getNewsCarousel()
-    const limit = 5
-    if (response.data.items.length < 5) limit = data.length
+    const response = await getBeritaTerkini(1, 5)
 
     let content = ``
-    for (let i = 0; i < limit; i++) {
+    response.data.forEach((item, index) => {
         content += `
             <div class="swiper-slide">
-                <img src="${response.data.items[i].enclosure.url}" alt="" />
+                <img src="${item.enclosure.url}" alt="" />
                 <div class="caption">
                     <h3>
-                        <a target="_blank" href="${
-                            response.data.items[i].link
-                        }">
-                            ${response.data.items[i].title}
+                        <a target="_blank" href="${item.link}">
+                            ${item.title}
                         </a>
                     </h3>
                     <div class='badges'>
                         <div class="badge badge-yellow">
                             <i class="bi bi-calendar-week"></i>
-                            ${moment(response.data.items[i].pubDate).format(
-                                'DD MMMM YYYY'
-                            )}
+                            ${moment(item.pubDate).format('DD MMMM YYYY')}
                         </div>
-                        ${response.data.items[i].categories
+                        ${item.categories
                             .map(
                                 (item) =>
                                     `<div class="badge badge-red">
@@ -43,16 +32,12 @@ export const refreshNewsCarousel = async () => {
                             .join('')}
                     </div>
                     <p class='phone-none'>
-                        ${response.data.items[i].contentSnippet.substr(
-                            0,
-                            200
-                        )} . . .
+                        ${item.contentSnippet.substr(0, 200)} . . .
                     </p>
                 </div>
             </div>
         `
-    }
-
+    })
     newsCarousel.innerHTML = content
     swiper.update()
     swiper.init()
