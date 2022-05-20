@@ -10,6 +10,11 @@ COPY . .
 
 RUN npm run build
 
-ARG APP_PORT=3000
+ARG APP_PORT
 
-CMD [ "npm", "run", "app", "--", "--port", "${APP_PORT}" ]
+EXPOSE ${APP_PORT}
+
+RUN echo ${APP_PORT}
+ENV APP_PORT=${APP_PORT}
+
+CMD [ "npm", "run", "app", "--app-port=${APP_PORT}" ]
