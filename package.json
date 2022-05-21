@@ -39,6 +39,7 @@
     },
     "devDependencies": {
         "dotenv-webpack": "^7.1.0",
-        "nodemon": "^2.0.16"
+        "nodemon": "^2.0.16",
+        "terser-webpack-plugin": "^5.3.1"
     }
 }
