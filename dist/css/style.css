@@ -353,6 +353,10 @@ nav {
     .glovid-app img {
         position: relative;
         /* top: -100px; */
+        width: 95%;
+    }
+    header {
+        margin-top: 0 !important;
     }
 }
 
