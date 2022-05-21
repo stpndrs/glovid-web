@@ -53,3 +53,7 @@ h4.skeleton-text {
     border-radius: 16px;
     background-color: #f9f9f9;
 }
+
+footer .container {
+    margin: auto;
+}
