@@ -1,0 +1,57 @@
+.dark {
+    background-color: #090b1f;
+    color: white;
+}
+
+.dark nav {
+    background-color: #0f1528dd !important;
+    color: white !important;
+    fill: white;
+}
+
+.dark .navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    color: #ffc727 !important;
+}
+
+.dark .glov-white {
+    display: block !important;
+    transition: 0.3s;
+}
+
+.dark .glov-dark {
+    display: none;
+    transition: 0.3s;
+}
+
+#darkBtn {
+    /* background-color: #0F1528; */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.dark #darkBtn {
+    /* background-color: #ffffff; */
+    color: rgb(255, 255, 255);
+}
+
+/* CHART JS START */
+.dark canvas {
+    background-color: rgb(17, 18, 38);
+    box-shadow: 0 10px 60px #0a0b1a;
+}
+/* CHART JS END */
+
+.dark .card-4 {
+    border: 1px solid #ffffff;
+}
+
+.dark .card-4 .title,
+.dark .breadcrumb {
+    background-color: #101222;
+}

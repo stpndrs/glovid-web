@@ -1,0 +1,59 @@
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+.skeleton-text {
+    height: 1rem;
+}
+p.skeleton-text {
+    height: 1rem !important;
+}
+h4.skeleton-text {
+    height: 1.8rem !important;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.api-berita-terkini .card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.api-news-page-list img {
+    vertical-align: middle;
+    width: 100%;
+    max-height: 190px;
+    object-fit: cover;
+}
+.card img {
+    height: 190px;
+}
+.spin {
+    animation: rotating 1s ease-in-out alternate infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.chart-sebaran canvas {
+    padding: 24px;
+    border-radius: 16px;
+    background-color: #f9f9f9;
+}
+
+footer .container {
+    margin: auto;
+}

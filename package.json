@@ -1,0 +1,45 @@
+{
+    "name": "glovid-web",
+    "version": "1.0.0",
+    "description": "<p>Berita : https://covid19.go.id/feed/berita</p>\r <p>Data Update Harian : https://data.covid19.go.id/public/api/update.json</p>\r <p>Data Setiap Provinsi : https://data.covid19.go.id/public/api/prov.json</p>\r <p>Data Pemeriksaan Vaksinasi : https://data.covid19.go.id/public/api/pemeriksaan-vaksinasi.json</p>\r <p>Data Rumah Sakit Rujukan : https://data.covid19.go.id/public/api/rs.json</p>",
+    "main": "script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "watch": "webpack --watch",
+        "server-watch": "nodemon api/server",
+        "server-start": "node api/server",
+        "app": "http-server ./dist --port ${npm_config_app_port}"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stpndrs/glovid-web.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/stpndrs/glovid-web/issues"
+    },
+    "homepage": "https://github.com/stpndrs/glovid-web#readme",
+    "dependencies": {
+        "axios": "^0.27.2",
+        "chart.js": "^3.7.1",
+        "cors": "^2.8.5",
+        "countup.js": "^2.1.0",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "http-server": "^14.1.0",
+        "leaflet": "^1.8.0",
+        "moment": "^2.29.3",
+        "rss-parser": "^3.12.0",
+        "swiper": "^8.1.4",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2"
+    },
+    "devDependencies": {
+        "dotenv-webpack": "^7.1.0",
+        "nodemon": "^2.0.16",
+        "terser-webpack-plugin": "^5.3.1"
+    }
+}

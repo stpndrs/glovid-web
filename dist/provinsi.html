@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+        />
+
+        <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="./css/default.css" />
+
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/dark.css" />
+    </head>
+
+    <body>
+        <!-- Darkmode Mobile -->
+        <div class="translate-box">
+            <div class="translator">
+                <span class="" onclick="glovid.setDarkMode()" id="darkBtn">
+                    <i class="bi bi-moon"></i>
+                </span>
+            </div>
+            <!-- <span class="btn" onclick="setDarkMode()" id="darkBtn">
+            <i class="bi bi-moon"></i>
+        </span> -->
+        </div>
+        <nav class="shadow-sm navbar navbar-expand-lg fixed-top navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="./img/glovid-nav-dark.svg"
+                        class="glov-dark"
+                        alt="Glovid"
+                    />
+                    <img
+                        src="./img/glovid-nav-white.svg"
+                        class="glov-white d-none"
+                        alt="Glovid"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html"
+                                >Beranda</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="berita.html">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sebaran.html">Sebaran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rsrujukan.html"
+                                >RS Rujukan</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar mobile start -->
+        <div class="navbarMobile">
+            <a href="index.html" class="perNavbarMobile active">
+                <div class="icon active">
+                    <i data-feather="home"></i>
+                </div>
+                <h3 class="active">Beranda</h3>
+            </a>
+
+            <a href="berita.html" class="perNavbarMobile">
+                <div class="icon">
+                    <i data-feather="book-open"></i>
+                </div>
+                <h3>Berita</h3>
+            </a>
+
+            <a href="sebaran.html" class="perNavbarMobile">
+                <div class="icon">
+                    <i data-feather="map-pin"></i>
+                </div>
+                <h3>Sebaran</h3>
+            </a>
+
+            <a href="rsrujukan.html" class="perNavbarMobile">
+                <div class="icon">
+                    <i data-feather="plus-circle"></i>
+                </div>
+                <h3>RS Rujukan</h3>
+            </a>
+        </div>
+        <!-- navbar mobile end -->
+
+        <section>
+            <header class="mb-5">
+                <h1>Data Provinsi</h1>
+            </header>
+        </section>
+
+        <div class="container">
+            <div class="input-group search">
+                <input
+                    type="text"
+                    class="form-control api-search"
+                    placeholder="Pencarian...."
+                />
+                <button
+                    class="btn btn-outline-secondary"
+                    type="button"
+                    id="button-addon2"
+                >
+                    <i data-feather="search"></i>
+                </button>
+            </div>
+
+            <section class="api-list-province">
+                <div
+                    class="mb-3 card"
+                    style="background-color: rgba(15, 21, 40, 0.5)"
+                >
+                    <div class="row align-items-stretch">
+                        <div
+                            class="text-center col-sm-12 col-lg-3 col-md-3 col-12 d-flex justify-content-center align-items-center flex-rows flex-md-column"
+                        >
+                            <img
+                                src="./icon/Blocks-1s-200px.svg"
+                                alt=""
+                                style="width: 100px"
+                            />
+                            <h5
+                                class="mt-3 mb-0 text-center ms-4 ms-md-0 fw-bold skeleton skeleton-text"
+                                style="width: 200px"
+                            ></h5>
+                        </div>
+                        <div class="col-sm-12 col-lg-9 col-md-9 col-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="card-3">
+                                        <!-- <div class="col-lg"> -->
+                                        <img
+                                            src="./icon/user-plus.svg"
+                                            alt=""
+                                        />
+                                        <!-- </div> -->
+                                        <div class="covid-data">
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="card-3">
+                                        <!-- <div class="col-lg"> -->
+                                        <img
+                                            src="./icon/user-check.svg"
+                                            alt=""
+                                        />
+                                        <!-- </div> -->
+                                        <div class="covid-data">
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="card-3">
+                                        <!-- <div class="col-lg"> -->
+                                        <img
+                                            src="./icon/user-minus.svg"
+                                            alt=""
+                                        />
+                                        <!-- </div> -->
+                                        <div class="covid-data">
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6 col-6">
+                                    <div class="card-3">
+                                        <!-- <div class="col-lg"> -->
+                                        <img src="./icon/user-x.svg" alt="" />
+                                        <!-- </div> -->
+                                        <div class="covid-data">
+                                            <img
+                                                src="./icon/Blocks-1s-200px.svg"
+                                                alt=""
+                                                style="width: 100px"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="#0f1528"
+                    fill-opacity="1"
+                    d="M0,64L48,80C96,96,192,128,288,133.3C384,139,480,117,576,133.3C672,149,768,203,864,234.7C960,267,1056,277,1152,266.7C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                ></path>
+            </svg>
+            <div class="content">
+                <div class="container row">
+                    <div class="mb-5 col-lg">
+                        <img src="./img/glovid-nav-white.svg" alt="Glovid" />
+                    </div>
+                    <div class="mb-5 col-lg">
+                        <h5>Menu</h5>
+                        <p><a href="index.html">Beranda</a></p>
+                        <p><a href="berita.html">Berita</a></p>
+                        <p><a href="sebaran.html">Sebaran</a></p>
+                    </div>
+                    <div class="mb-5 col-lg text-end">
+                        <h5>About</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Tempora optio est numquam dignissimos
+                            exercitationem enim, iure amet voluptatibus iste,
+                            voluptas non reprehenderit voluptate. Officiis
+                            magnam modi voluptatem quos earum esse.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/script.js"></script>
+        <script>
+            glovid.provinceScript()
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            feather.replace()
+        </script>
+    </body>
+</html>
