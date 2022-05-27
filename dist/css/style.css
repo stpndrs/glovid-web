@@ -127,6 +127,15 @@ section {
     font-size: x-large;
 }
 
+@media (max-width: 991.98px) {
+    .card-3 h2 {
+        font-size: x-large !important;
+    }
+    .card-3 p {
+        font-size: large;
+    }
+}
+
 .card-4 {
     max-width: fit-content;
     border: 1px solid #101222;
@@ -383,7 +392,11 @@ header {
 header h1 {
     font-family: 'Podkova', serif;
 }
-
+@media (max-width: 767.98px) {
+    footer {
+        padding-bottom: 20px;
+    }
+}
 footer .content {
     background-color: #0f1528;
     color: white;
